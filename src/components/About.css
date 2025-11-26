@@ -1,0 +1,36 @@
+/* About Styles */
+.about-section {
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.about-container {
+    max-width: 48rem;
+    /* max-w-3xl equivalent */
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .about-title {
+        font-size: 2.5rem;
+    }
+}
+
+.about-text {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+    .about-text {
+        font-size: 1.5rem;
+    }
+}

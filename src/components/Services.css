@@ -1,0 +1,100 @@
+/* Services Styles */
+.services-section {
+    background-color: var(--bg-color);
+}
+
+.service-card {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    /* For spotlight effect */
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+/* Spotlight Effect */
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.06),
+            transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* Border Glow Effect */
+.service-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.3),
+            transparent 40%);
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.5s ease;
+    border-radius: inherit;
+    pointer-events: none;
+    /* Use mask to only show border */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 1px;
+    /* Border width */
+}
+
+.service-card:hover::after {
+    opacity: 1;
+}
+
+.service-content {
+    position: relative;
+    z-index: 2;
+}
+
+.service-icon {
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: 0.025em;
+}
+
+.service-desc {
+    color: #9ca3af;
+    line-height: 1.6;
+}
