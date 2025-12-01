@@ -56,7 +56,7 @@ const Footer = () => {
                             © {new Date().getFullYear()} Avolve Agency. All rights reserved.
                         </p>
                         <p className="copyright" style={{ marginTop: '0.5rem' }}>
-                            Web design studio in Visakhapatnam, India. Serving clients across India and globally.
+                            Web design & branding agency based remotely in India. Serving businesses across India and globally.
                         </p>
                     </div>
                     <p className="copyright">

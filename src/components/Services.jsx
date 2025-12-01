@@ -63,6 +63,45 @@ const Services = () => {
                         </div>
                     ))}
                 </motion.div>
+
+                <div className="services-seo-content" style={{ marginTop: '4rem', color: 'var(--text-secondary)' }}>
+                    <div className="grid-2">
+                        <div>
+                            <h3 style={{ color: 'var(--text-primary)', marginBottom: '1rem', fontSize: '1.5rem' }}>Why Choose AVOLVE?</h3>
+                            <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                                As a leading <strong>web design agency in India</strong>, we specialize in creating high-performance digital experiences.
+                                Unlike other <strong>freelance web development agencies</strong>, we combine strategic branding with cutting-edge technology
+                                to deliver results. Whether you need a <strong>startup website design</strong> or a complete <strong>business branding service</strong>,
+                                our team ensures your digital presence stands out.
+                            </p>
+
+                            <h3 style={{ color: 'var(--text-primary)', marginBottom: '1rem', fontSize: '1.5rem' }}>Industries We Serve</h3>
+                            <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
+                                <li>✓ SaaS & Tech Startups</li>
+                                <li>✓ E-commerce Brands</li>
+                                <li>✓ Healthcare & Medical</li>
+                                <li>✓ Real Estate & Construction</li>
+                                <li>✓ Educational Institutions</li>
+                                <li>✓ Creative Portfolios</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style={{ color: 'var(--text-primary)', marginBottom: '1rem', fontSize: '1.5rem' }}>Our Process</h3>
+                            <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
+                                <strong>1. Discovery:</strong> We understand your business goals and target audience.
+                            </p>
+                            <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
+                                <strong>2. Design:</strong> Our <strong>UI UX design service</strong> team creates stunning, user-centric mockups.
+                            </p>
+                            <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
+                                <strong>3. Development:</strong> We build using modern tech stacks for speed and SEO.
+                            </p>
+                            <p style={{ marginBottom: '0', lineHeight: '1.6' }}>
+                                <strong>4. Launch & Growth:</strong> We deploy and help you scale with our <strong>digital marketing agency</strong> expertise.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

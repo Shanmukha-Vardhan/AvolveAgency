@@ -14,7 +14,12 @@ const About = () => {
                 >
                     <h2 className="about-title">About Avolve</h2>
                     <p className="about-text">
-                        Avolve is a creative web development and UI/UX design agency focused on building modern websites for startups and businesses.
+                        Meet the creative minds behind AVOLVE. We design, build and scale websites that convert visitors into customers.
+                        As a premier <strong>web design agency</strong> and <strong>branding company in India</strong>, we are passionate about helping startups and established businesses find their unique voice in the digital landscape.
+                    </p>
+                    <p className="about-text" style={{ marginTop: '1rem' }}>
+                        From <strong>custom website development</strong> to full-scale <strong>digital marketing</strong> strategies, our team provides end-to-end solutions.
+                        We don't just build websites; we build digital products that drive growth. Whether you are looking for a <strong>freelance web development agency</strong> partner or a dedicated <strong>UI UX design service</strong>, Avolve is here to bring your vision to life.
                     </p>
                 </motion.div>
             </div>
