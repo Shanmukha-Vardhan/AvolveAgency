@@ -2,8 +2,13 @@
 
 :root {
   --bg-color: #050505;
-  --text-color: #f5f5f7;
-  --accent-color: #94a3b8;
+  --text-color: #FFFFFF;
+  --text-muted: #D4D4D4;
+  --primary-color: #FACC15;
+  /* Yellow */
+  --secondary-color: #FFFFFF;
+  /* White */
+  --accent-color: #FACC15;
   --glass-bg: rgba(5, 5, 5, 0.8);
   --glass-border: rgba(255, 255, 255, 0.1);
   --card-bg: rgba(255, 255, 255, 0.05);
@@ -94,12 +99,13 @@ button {
 }
 
 .btn-primary {
-  background-color: #fff;
+  background-color: var(--primary-color);
   color: #000;
 }
 
 .btn-primary:hover {
-  background-color: #e5e5e5;
+  background-color: #EAB308;
+  /* Darker Yellow */
 }
 
 .btn-secondary {
@@ -112,8 +118,9 @@ button {
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #fff, #64748b);
+  background: linear-gradient(to right, #FFFFFF, var(--primary-color));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

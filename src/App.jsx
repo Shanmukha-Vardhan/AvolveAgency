@@ -12,9 +12,12 @@ import About from './components/About';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 
+import GrainOverlay from './components/GrainOverlay';
+
 function App() {
   return (
     <div className="app">
+      <GrainOverlay />
       <Navbar />
       <main>
         <Hero />

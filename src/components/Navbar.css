@@ -58,7 +58,7 @@
 .nav-cta {
     margin-left: 2rem;
     padding: 0.6rem 1.25rem;
-    background-color: #fff;
+    background-color: var(--primary-color);
     color: #000;
     border-radius: 9999px;
     font-size: 0.875rem;
@@ -67,7 +67,7 @@
 }
 
 .nav-cta:hover {
-    background-color: #e5e5e5;
+    background-color: #EAB308;
 }
 
 .mobile-menu-btn {

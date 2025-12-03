@@ -9,7 +9,7 @@
 }
 
 .sticky-cta-btn {
-    background-color: #fff;
+    background-color: var(--primary-color);
     color: #000;
     width: 3.5rem;
     height: 3.5rem;
