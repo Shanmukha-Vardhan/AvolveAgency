@@ -25,12 +25,13 @@ function initPreloader() {
         }, 1000);
     });
 
-    // Fallback
+    // Fallback — ensures site reveals even if resources are slow
     setTimeout(() => {
         if (!preloader.classList.contains('fade-out')) {
             preloader.classList.add('fade-out');
+            document.body.style.overflow = 'visible';
         }
-    }, 3000);
+    }, 2000);
 }
 
 /* --- Navigation --- */
