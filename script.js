@@ -3,15 +3,14 @@
    Purpose: Minimalist, smooth, high-fidelity experience.
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
-    initPreloader();
-    initNavigation();
-    initMobileMenu();
-    initScrollReveal();
-    initSmoothScroll();
-    initCountUp();
-    initContactForm();
-});
+// Note: type="module" handles defer/DOMContentLoaded automatically
+initPreloader();
+initNavigation();
+initMobileMenu();
+initScrollReveal();
+initSmoothScroll();
+initCountUp();
+initContactForm();
 
 /* --- Preloader --- */
 function initPreloader() {
