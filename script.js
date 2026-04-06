@@ -8,7 +8,7 @@ initPreloader();
 initNavigation();
 initMobileMenu();
 initScrollReveal();
-initSmoothScroll();
+initLenis();
 initCountUp();
 initContactForm();
 
@@ -129,18 +129,42 @@ function initCountUp() {
     counters.forEach(counter => observer.observe(counter));
 }
 
-/* --- Smooth Scroll --- */
-function initSmoothScroll() {
+/* --- Lenis Smooth Scroll --- */
+function initLenis() {
+    // Check if Lenis is loaded via CDN link
+    if (typeof Lenis === 'undefined') return;
+
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Smooth Scroll for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+        anchor.addEventListener('click', (e) => {
+            const targetId = anchor.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const target = document.querySelector(targetId);
             if (target) {
-                const navHeight = 80;
-                const offsetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
+                e.preventDefault();
+                lenis.scrollTo(target, {
+                    offset: -80,
+                    duration: 1.5,
                 });
             }
         });
