@@ -710,22 +710,32 @@ a {
     margin-bottom: 16px;
 }
 
-.project-result {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: rgba(16, 185, 129, 0.06);
-    border: 1px solid rgba(16, 185, 129, 0.12);
-    border-radius: var(--radius-full);
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--success);
+.project-result,
+.project-metric {
+    display: block;
+    padding: 10px 14px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-.project-result svg {
-    flex-shrink: 0;
-    color: var(--success);
+.project-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+a.project-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 /* ============================================
