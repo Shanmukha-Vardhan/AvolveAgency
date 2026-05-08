@@ -177,7 +177,7 @@ function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = form.querySelector('.submit-btn');
         const originalText = btn.innerText;
@@ -185,19 +185,53 @@ function initContactForm() {
         btn.innerText = 'Sending Inquiry...';
         btn.disabled = true;
 
-        setTimeout(() => {
-            btn.innerText = 'Inquiry Received. Talk Soon.';
-            btn.style.backgroundColor = '#000';
-            btn.style.color = '#fff';
+        // Gather form data for Web3Forms
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
 
-            setTimeout(() => {
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            });
+            
+            const result = await response.json();
+            
+            if (response.status === 200) {
+                // Success state
+                btn.innerText = 'Inquiry Received. Talk Soon.';
+                btn.style.backgroundColor = '#000';
+                btn.style.color = '#fff';
+            } else {
+                // Error from API
+                console.log(result);
+                btn.innerText = 'Something went wrong.';
+                btn.style.backgroundColor = '#ff3333';
+                btn.style.color = '#fff';
+            }
+        } catch (error) {
+            // Network error
+            console.log(error);
+            btn.innerText = 'Network Error. Try again.';
+            btn.style.backgroundColor = '#ff3333';
+            btn.style.color = '#fff';
+        }
+
+        // Reset button and form after delay
+        setTimeout(() => {
+            if (btn.innerText === 'Inquiry Received. Talk Soon.') {
                 form.reset();
-                btn.innerText = originalText;
-                btn.disabled = false;
-                btn.style.backgroundColor = '';
-                btn.style.color = '';
-            }, 4000);
-        }, 1200);
+            }
+            btn.innerText = originalText;
+            btn.disabled = false;
+            btn.style.backgroundColor = '';
+            btn.style.color = '';
+        }, 4000);
     });
 }
 
