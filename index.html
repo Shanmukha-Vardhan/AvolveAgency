@@ -37,6 +37,7 @@
                 <span class="nav-logo-text">Avolve Studio</span>
             </a>
             <ul class="nav-links" id="nav-links">
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
                 <li><a href="#work" class="nav-link">Work</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#process" class="nav-link">Process</a></li>
@@ -51,6 +52,7 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobile-menu">
         <ul class="mobile-menu-links">
+            <li><a href="#pricing" class="mobile-link">Pricing</a></li>
             <li><a href="#work" class="mobile-link">Work</a></li>
             <li><a href="#services" class="mobile-link">Services</a></li>
             <li><a href="#process" class="mobile-link">Process</a></li>
@@ -84,10 +86,70 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="section-label reveal">01 / Pricing</div>
+            <div class="pricing-grid">
+                <!-- Guarantee -->
+                <div class="pricing-guarantee reveal">
+                    <h3 class="guarantee-title">₹10,000 in 2 days or free.</h3>
+                    <p class="guarantee-desc">We build fast. If we don't deliver your frontend within 48 hours of receiving content, it's on the house.</p>
+                    <button class="tnc-link" id="open-tnc">* T&C apply</button>
+                </div>
+                <!-- Standard Plan -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Standard</h3>
+                        <p class="plan-desc">For businesses that need a solid web presence</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₹</span><span class="amount">25,000</span><span class="period">/ project</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Up to 8 pages</li>
+                        <li>Custom UI design</li>
+                        <li>Contact form + WhatsApp integration</li>
+                        <li>Domain + hosting setup</li>
+                        <li>Basic SEO setup</li>
+                        <li>2 rounds of revisions</li>
+                        <li>Delivered in 5–7 days</li>
+                        <li class="disabled">No backend / database</li>
+                        <li class="disabled">No admin dashboard</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary btn-full plan-btn">Get started ↗</a>
+                </div>
+                <!-- Premium Plan -->
+                <div class="pricing-card premium reveal">
+                    <div class="popular-badge">Most popular</div>
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Premium</h3>
+                        <p class="plan-desc">For businesses that need a full digital product</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₹</span><span class="amount">35,000+</span><span class="period">/ project</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Unlimited pages</li>
+                        <li>Custom UI/UX design system</li>
+                        <li>Backend + database (Firebase)</li>
+                        <li>Admin dashboard</li>
+                        <li>Auth — login / signup</li>
+                        <li>Domain + hosting + SSL</li>
+                        <li>Advanced SEO + analytics</li>
+                        <li>3 rounds of revisions</li>
+                        <li>30 days post-launch support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-full plan-btn">Get started ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Work Section -->
     <section class="section work" id="work">
         <div class="container">
-            <div class="section-label reveal">01 / Projects</div>
+            <div class="section-label reveal">02 / Projects</div>
             <div class="projects-grid">
                 <!-- Project 1 — Avolve Family Restaurant -->
                 <a href="https://teja-aed54.web.app/auth" target="_blank" class="project-card project-card-wide reveal">
@@ -151,7 +213,7 @@
     <!-- Services Section -->
     <section class="section services" id="services">
         <div class="container">
-            <div class="section-label reveal">02 / Services</div>
+            <div class="section-label reveal">03 / Services</div>
             <div class="services-grid reveal">
                 <div class="service-card">
                     <div class="service-icon">01</div>
@@ -180,7 +242,7 @@
     <!-- Process Section -->
     <section class="section process" id="process">
         <div class="container">
-            <div class="section-label reveal">03 / Process</div>
+            <div class="section-label reveal">04 / Process</div>
             <div class="process-grid">
                 <div class="process-step reveal">
                     <span class="step-number">Phase 01</span>
@@ -204,7 +266,7 @@
     <!-- Contact Section -->
     <section class="section contact" id="contact">
         <div class="container">
-            <div class="section-label reveal">04 / Contact</div>
+            <div class="section-label reveal">05 / Contact</div>
             <div class="contact-wrapper">
                 <div class="contact-info reveal">
                     <h2 class="contact-title">Let’s build something better.</h2>
@@ -252,6 +314,41 @@
             </div>
         </div>
     </footer>
+
+    <!-- T&C Modal -->
+    <div class="modal-overlay" id="tnc-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-tnc">&times;</button>
+            <h3 class="modal-title">Terms & Conditions</h3>
+            <div class="modal-body">
+                <h4>Qualifies for the 2-day guarantee:</h4>
+                <ul>
+                    <li>Frontend-only websites (React/HTML, no backend logic)</li>
+                    <li>Up to 5–7 pages (Home, About, Services, Contact, etc.)</li>
+                    <li>Client provides all content upfront — copy, images, logo, brand colors — on Day 1</li>
+                    <li>One round of revisions included within the 2-day window</li>
+                    <li>Delivered as a live Vercel/Netlify deployment (your domain or a preview link)</li>
+                </ul>
+                
+                <h4>Does NOT qualify (excluded from guarantee):</h4>
+                <ul>
+                    <li>Domain registration and third-party hosting setup (depends on registrar timelines)</li>
+                    <li>Projects requiring custom backend, database, or auth</li>
+                    <li>E-commerce / payment gateway integration</li>
+                    <li>Projects where client delays content delivery after kickoff</li>
+                    <li>Revisions requested after the 2-day window closes</li>
+                    <li>Projects requiring third-party API integrations (WhatsApp, maps, CRMs, etc.)</li>
+                </ul>
+
+                <h4>Clock mechanics:</h4>
+                <ul>
+                    <li>The 2-day timer starts only after full content is received and 50% advance is paid</li>
+                    <li>"2 days" = 48 working hours, not calendar days</li>
+                    <li>Weekends and public holidays pause the clock</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
     <script type="module" src="/script.js"></script>
